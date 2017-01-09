@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ios h5 交互</title>
+
+    <style>
+        #container{
+            width: 100%;
+            height: 100%;
+        }
+        #one{
+            width: 40px;
+            height: 40px;
+            background: darkblue;
+            border: blue solid 2px;
+            transition: width 2s, height 2s,transform 3s ;
+        }
+        #two{
+            margin-top: 20px;
+            width: 50px;
+            height: 50px;
+            background: darkgoldenrod;
+            border: red solid 2px;
+        }
+        #three{
+            margin-top: 20px;
+            width: 40px;
+            height: 40px;
+            background: darkgreen;
+            border: greenyellow solid 2px;
+            transition: width 2s;
+        }
+        button{
+            width: 100px;
+            height: 35px;
+        }
+    </style>
+    <script>
+        function rotationAction(){
+          var a = document.getElementById('one');
+            a.style.transform = "rotate(45deg)";
+            a.style.width   = "60px";
+            a.style.height  = "70px";
+        }
+        function changeColor(){
+            var b = document.getElementById('two');
+            b.style.backgroundColor = "red";
+        }
+        function changeWidth(){
+            document.getElementById("three").style.width = "200px";
+        }
+    </script>
+
+</head>
+<body>
+
+    <div id="container">
+  <div id="one"></div>
+
+  <div id="two"></div>
+
+  <div id="three"></div>
+
+        <button onclick="rotationAction()" value="button">transition</button>
+        <button onclick="changeColor()" name="changeColor">changeColor</button>
+        <button onclick="changeWidth()">changeWidth</button>
+    </div>
+</body>
+</html>
